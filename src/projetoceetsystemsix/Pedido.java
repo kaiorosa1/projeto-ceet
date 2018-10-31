@@ -10,7 +10,33 @@ package projetoceetsystemsix;
  * @author Aluno
  */
 public class Pedido {
-    int id;
-    int quantidade;
-    double valorTotal;
+    private int id;
+    private int quantidade;
+    private double valorTotal; 
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
+    }
+
+    public double getValorTotal() {
+        return valorTotal;
+    }
+
+    public void setValorTotal(double valorTotal) {
+        this.valorTotal = valorTotal;
+    }
+     
+    
 }

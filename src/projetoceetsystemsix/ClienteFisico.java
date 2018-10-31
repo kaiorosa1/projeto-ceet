@@ -10,7 +10,25 @@ package projetoceetsystemsix;
  * @author Aluno
  */
 public class ClienteFisico extends Cliente{
-   int CPF;
-   int RG;
+   private int CPF;
+   private int RG; 
+
+    public int getCPF() {
+        return CPF;
+    }
+
+    public void setCPF(int CPF) {
+        this.CPF = CPF;
+    }
+
+    public int getRG() {
+        return RG;
+    }
+
+    public void setRG(int RG) {
+        this.RG = RG;
+    }
+    
+   
  
 }
