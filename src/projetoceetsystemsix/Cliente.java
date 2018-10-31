@@ -12,7 +12,7 @@ import java.util.Date;
  * @author Aluno
  */
 public class Cliente {
-    int id;
+   
     String nome;
     String endereco;
     String bairro;
