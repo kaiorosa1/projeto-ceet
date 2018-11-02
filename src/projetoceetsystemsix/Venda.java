@@ -19,7 +19,8 @@ public class Venda {
     private double totalVenda;
     private double parcela;
     private int jurosMensal; 
-
+    
+    //Fazer as ligacoes entre as classes
     public int getId() {
         return id;
     }
