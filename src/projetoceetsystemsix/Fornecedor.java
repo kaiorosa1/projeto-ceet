@@ -14,7 +14,7 @@ public class Fornecedor {
     private String razaoSocial;
     private int CNPJ;
     private String logradouro;
-    private String complento;
+    private String complemento;
     private String bairro;
     private String cidade;
     private String UF;
@@ -55,12 +55,12 @@ public class Fornecedor {
         this.logradouro = logradouro;
     }
 
-    public String getComplento() {
-        return complento;
+    public String getComplemento() {
+        return complemento;
     }
 
-    public void setComplento(String complento) {
-        this.complento = complento;
+    public void setComlemento(String complemento) {
+        this.complemento = complemento;
     }
 
     public String getBairro() {
