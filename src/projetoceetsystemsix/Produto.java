@@ -16,7 +16,9 @@ public class Produto {
     private double valorVenda;
     private int quantidadeEstoque;
     private int quantidadeEstoqueCritico; 
-
+    private Fornecedor fornecedorProduto; //
+    
+    
     public int getId() {
         return id;
     }
