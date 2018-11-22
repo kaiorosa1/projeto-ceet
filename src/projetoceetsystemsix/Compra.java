@@ -13,7 +13,7 @@ public class Compra {
     private int id;
     private int quantidade;
     private double valorCompra; 
-
+    private Fornecedor fornecedorCompra; // ultimo feito
     public int getId() {
         return id;
     }

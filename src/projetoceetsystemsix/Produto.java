@@ -16,8 +16,15 @@ public class Produto {
     private double valorVenda;
     private int quantidadeEstoque;
     private int quantidadeEstoqueCritico; 
+<<<<<<< HEAD
     
 
+=======
+    private Fornecedor fornecedorProduto; // 
+    
+    
+    
+>>>>>>> 4fa1723112d3c8f68b148a03c5f00513bf56fd12
     public int getId() {
         return id;
     }
