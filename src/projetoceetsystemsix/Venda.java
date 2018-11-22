@@ -19,7 +19,6 @@ public class Venda {
     private double totalVenda;
     private double parcela;
     private int jurosMensal; 
-    private Pedido pedidoVenda; // acertar essas ligacoes no diagrama de classe
     
     //Fazer as ligacoes entre as classes
     public int getId() {
