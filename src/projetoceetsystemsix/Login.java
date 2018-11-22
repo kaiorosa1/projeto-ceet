@@ -5,9 +5,6 @@
  */
 package projetoceetsystemsix;
 
-import javax.swing.JOptionPane;
-import javax.swing.JPasswordField;
-
 /**
  *
  * @author Aluno
@@ -39,9 +36,7 @@ public class Login {
 
     public void setSenha(String senha) {
         this.senha = senha;
-    } 
-     
-    
+    }
      
     
 }
