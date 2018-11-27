@@ -33,15 +33,15 @@ public class Visualizar extends javax.swing.JFrame {
         jTabbedPane1 = new javax.swing.JTabbedPane();
         CadastroFornecedor = new javax.swing.JPanel();
         FormFornecedor = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        mostrarFornecedor = new javax.swing.JButton();
         cbFornecedor = new javax.swing.JComboBox<>();
         jPanel3 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
+        mostrarCliente = new javax.swing.JButton();
         cbCliente = new javax.swing.JComboBox<>();
         jPanel6 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
-        jToggleButton1 = new javax.swing.JToggleButton();
+        mostrarProduto = new javax.swing.JToggleButton();
         cbProduto = new javax.swing.JComboBox<>();
         jPanel4 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -69,7 +69,7 @@ public class Visualizar extends javax.swing.JFrame {
 
         FormFornecedor.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fornecedor", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14))); // NOI18N
 
-        jButton1.setText("Mostrar Informações");
+        mostrarFornecedor.setText("Mostrar Informações");
 
         cbFornecedor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecionar Fornecedor", "Item 2", "Item 3", "Item 4" }));
 
@@ -79,7 +79,7 @@ public class Visualizar extends javax.swing.JFrame {
             FormFornecedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FormFornecedorLayout.createSequentialGroup()
                 .addContainerGap(257, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(mostrarFornecedor)
                 .addGap(315, 315, 315))
             .addGroup(FormFornecedorLayout.createSequentialGroup()
                 .addContainerGap()
@@ -92,7 +92,7 @@ public class Visualizar extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(cbFornecedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 187, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(mostrarFornecedor)
                 .addContainerGap())
         );
 
@@ -116,10 +116,10 @@ public class Visualizar extends javax.swing.JFrame {
 
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Cliente", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14))); // NOI18N
 
-        jButton2.setText("Mostrar Informações");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        mostrarCliente.setText("Mostrar Informações");
+        mostrarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                mostrarClienteActionPerformed(evt);
             }
         });
 
@@ -133,7 +133,7 @@ public class Visualizar extends javax.swing.JFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(229, 229, 229)
-                        .addComponent(jButton2))
+                        .addComponent(mostrarCliente))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(cbCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -145,7 +145,7 @@ public class Visualizar extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(cbCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 211, Short.MAX_VALUE)
-                .addComponent(jButton2)
+                .addComponent(mostrarCliente)
                 .addContainerGap())
         );
 
@@ -170,7 +170,7 @@ public class Visualizar extends javax.swing.JFrame {
 
         jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Produto ", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14))); // NOI18N
 
-        jToggleButton1.setText("Mostrar Cadastro");
+        mostrarProduto.setText("Mostrar Cadastro");
 
         cbProduto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecionar Produto", "Item 2", "Item 3", "Item 4" }));
 
@@ -182,7 +182,7 @@ public class Visualizar extends javax.swing.JFrame {
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addGap(239, 239, 239)
-                        .addComponent(jToggleButton1))
+                        .addComponent(mostrarProduto))
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(cbProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -194,7 +194,7 @@ public class Visualizar extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(cbProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 174, Short.MAX_VALUE)
-                .addComponent(jToggleButton1)
+                .addComponent(mostrarProduto)
                 .addGap(26, 26, 26))
         );
 
@@ -270,9 +270,9 @@ public class Visualizar extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void mostrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrarClienteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_mostrarClienteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -315,8 +315,6 @@ public class Visualizar extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cbCliente;
     private javax.swing.JComboBox<String> cbFornecedor;
     private javax.swing.JComboBox<String> cbProduto;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JPanel jPanel1;
@@ -327,6 +325,8 @@ public class Visualizar extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JToggleButton jToggleButton1;
+    private javax.swing.JButton mostrarCliente;
+    private javax.swing.JButton mostrarFornecedor;
+    private javax.swing.JToggleButton mostrarProduto;
     // End of variables declaration//GEN-END:variables
 }

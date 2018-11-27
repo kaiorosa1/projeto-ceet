@@ -141,7 +141,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace pref="257" max="32767" attributes="0"/>
-                                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="mostrarFornecedor" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="315" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
@@ -157,14 +157,14 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="cbFornecedor" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace pref="187" max="32767" attributes="0"/>
-                                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="mostrarFornecedor" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
                       </Layout>
                       <SubComponents>
-                        <Component class="javax.swing.JButton" name="jButton1">
+                        <Component class="javax.swing.JButton" name="mostrarFornecedor">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="Mostrar Informa&#xe7;&#xf5;es"/>
                           </Properties>
@@ -236,7 +236,7 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="229" max="-2" attributes="0"/>
-                                          <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                                          <Component id="mostrarCliente" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace max="-2" attributes="0"/>
@@ -253,19 +253,19 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="cbCliente" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace pref="211" max="32767" attributes="0"/>
-                                  <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="mostrarCliente" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
                       </Layout>
                       <SubComponents>
-                        <Component class="javax.swing.JButton" name="jButton2">
+                        <Component class="javax.swing.JButton" name="mostrarCliente">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="Mostrar Informa&#xe7;&#xf5;es"/>
                           </Properties>
                           <Events>
-                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mostrarClienteActionPerformed"/>
                           </Events>
                         </Component>
                         <Component class="javax.swing.JComboBox" name="cbCliente">
@@ -335,7 +335,7 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="239" max="-2" attributes="0"/>
-                                          <Component id="jToggleButton1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="mostrarProduto" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace max="-2" attributes="0"/>
@@ -352,14 +352,14 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="cbProduto" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace pref="174" max="32767" attributes="0"/>
-                                  <Component id="jToggleButton1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="mostrarProduto" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
                       </Layout>
                       <SubComponents>
-                        <Component class="javax.swing.JToggleButton" name="jToggleButton1">
+                        <Component class="javax.swing.JToggleButton" name="mostrarProduto">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="Mostrar Cadastro"/>
                           </Properties>
