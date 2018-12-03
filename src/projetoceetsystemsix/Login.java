@@ -14,8 +14,8 @@ import javax.swing.JPasswordField;
  */
 public class Login {
     private int id;
-    private String username;
-    private String senha; 
+    private String username = "admin";
+    private String senha = "admin"; 
 
     public int getId() {
         return id;

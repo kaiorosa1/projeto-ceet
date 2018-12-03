@@ -54,7 +54,7 @@ public class TelaMenuPrincipal extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(188, 75, 50));
 
-        jButton7.setIcon(new javax.swing.ImageIcon("C:\\Users\\André\\Downloads\\close-button (1).png")); // NOI18N
+        jButton7.setIcon(new javax.swing.ImageIcon("C:\\Users\\André\\Desktop\\ProjetoCEET\\src\\projetoceetsystemsix\\close-button.png")); // NOI18N
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel8.setText("Sair");
@@ -82,12 +82,12 @@ public class TelaMenuPrincipal extends javax.swing.JFrame {
 
         jLayeredPane1.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, -1, 360));
 
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\André\\Downloads\\clipboard-with-pencil- (2).png")); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\André\\Desktop\\ProjetoCEET\\src\\projetoceetsystemsix\\CadCliente.png")); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel1.setText("Cadastrar Cliente");
 
-        jButton2.setIcon(new javax.swing.ImageIcon("C:\\Users\\André\\Downloads\\iconfinder_icon_55_227000 (1).png")); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon("C:\\Users\\André\\Desktop\\ProjetoCEET\\src\\projetoceetsystemsix\\CadProduto.png")); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel2.setText("Cadastrar Produto");
@@ -95,7 +95,7 @@ public class TelaMenuPrincipal extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setText("Cadastrar Fornecedor");
 
-        jButton3.setIcon(new javax.swing.ImageIcon("C:\\Users\\André\\Downloads\\man-talking-by-mic-on-a-presentation (1).png")); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon("C:\\Users\\André\\Desktop\\ProjetoCEET\\src\\projetoceetsystemsix\\CadFornecedor.png")); // NOI18N
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel4.setText("Pesquisar Cliente");
@@ -106,13 +106,13 @@ public class TelaMenuPrincipal extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel6.setText("Pesquisar Fornecedor");
 
-        jButton4.setIcon(new javax.swing.ImageIcon("C:\\Users\\André\\Downloads\\search (1).png")); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon("C:\\Users\\André\\Desktop\\ProjetoCEET\\src\\projetoceetsystemsix\\PesqCliente.png")); // NOI18N
 
-        jButton5.setIcon(new javax.swing.ImageIcon("C:\\Users\\André\\Downloads\\iconfinder_meanicons_32_197241 (1).png")); // NOI18N
+        jButton5.setIcon(new javax.swing.ImageIcon("C:\\Users\\André\\Desktop\\ProjetoCEET\\src\\projetoceetsystemsix\\PesqProduto.png")); // NOI18N
 
-        jButton6.setIcon(new javax.swing.ImageIcon("C:\\Users\\André\\Downloads\\iconfinder_Socialmedia_icons_MySpace_492105 (1).png")); // NOI18N
+        jButton6.setIcon(new javax.swing.ImageIcon("C:\\Users\\André\\Desktop\\ProjetoCEET\\src\\projetoceetsystemsix\\PesqFornecedor.png")); // NOI18N
 
-        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\André\\Downloads\\iconfinder_Game_Controller_2228674.png")); // NOI18N
+        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\André\\Desktop\\ProjetoCEET\\src\\projetoceetsystemsix\\controle.png")); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -158,10 +158,10 @@ public class TelaMenuPrincipal extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(124, 124, 124))))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(266, 266, 266)
-                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel9)
+                .addGap(303, 303, 303))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -176,9 +176,9 @@ public class TelaMenuPrincipal extends javax.swing.JFrame {
                     .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(25, 25, 25)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jLabel5)
@@ -195,23 +195,23 @@ public class TelaMenuPrincipal extends javax.swing.JFrame {
 
         jPanel4.setBackground(new java.awt.Color(102, 102, 102));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\André\\Desktop\\icon.png")); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\André\\Desktop\\ProjetoCEET\\src\\projetoceetsystemsix\\icon.png")); // NOI18N
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(297, 297, 297)
+                .addGap(300, 300, 300)
                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(346, Short.MAX_VALUE))
+                .addContainerGap(343, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 120, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jLayeredPane1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 120));

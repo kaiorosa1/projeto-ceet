@@ -5,6 +5,8 @@
  */
 package projetoceetsystemsix;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Aluno
@@ -65,14 +67,14 @@ public class TelaLogin extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(106, 106, 106))
+                .addGap(100, 100, 100))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(31, 31, 31)
+                .addGap(32, 32, 32)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -85,7 +87,7 @@ public class TelaLogin extends javax.swing.JFrame {
 
         txtSenha.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\André\\Downloads\\iconfinder_Rounded-31_2024644.png")); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\André\\Desktop\\ProjetoCEET\\src\\projetoceetsystemsix\\iconfinder_Rounded-31_2024644.png")); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -162,6 +164,14 @@ public class TelaLogin extends javax.swing.JFrame {
         Login logar = new Login(); 
         logar.setUsername(txtLogin.getText()); 
         logar.setSenha(txtSenha.getText());  
+        if(logar.getUsername().equals("admin") && logar.getSenha().equals("admin")){ 
+            JOptionPane.showMessageDialog(null, "Bem vindo!");
+            TelaMenuPrincipal menu = new TelaMenuPrincipal(); 
+            menu.setVisible(true);
+        }else 
+            JOptionPane.showMessageDialog(null, "Login ou Senha Incorreto !");
+        
+        
         
     }//GEN-LAST:event_jButton1ActionPerformed
 

@@ -83,7 +83,7 @@
             <Component class="javax.swing.JButton" name="jButton7">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Andr&#xe9;\Downloads\close-button (1).png"/>
+                  <Image iconType="2" name="C:\Users\Andr&#xe9;\Desktop\ProjetoCEET\src\projetoceetsystemsix\close-button.png"/>
                 </Property>
               </Properties>
             </Component>
@@ -160,10 +160,10 @@
                           </Group>
                       </Group>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="266" max="-2" attributes="0"/>
-                      <Component id="jLabel9" min="-2" pref="168" max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
+                      <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="303" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -182,9 +182,9 @@
                           <Component id="jButton2" alignment="1" max="32767" attributes="0"/>
                           <Component id="jButton3" alignment="1" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jLabel9" min="-2" pref="117" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -205,7 +205,7 @@
             <Component class="javax.swing.JButton" name="jButton1">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Andr&#xe9;\Downloads\clipboard-with-pencil- (2).png"/>
+                  <Image iconType="2" name="C:\Users\Andr&#xe9;\Desktop\ProjetoCEET\src\projetoceetsystemsix\CadCliente.png"/>
                 </Property>
               </Properties>
             </Component>
@@ -220,7 +220,7 @@
             <Component class="javax.swing.JButton" name="jButton2">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Andr&#xe9;\Downloads\iconfinder_icon_55_227000 (1).png"/>
+                  <Image iconType="2" name="C:\Users\Andr&#xe9;\Desktop\ProjetoCEET\src\projetoceetsystemsix\CadProduto.png"/>
                 </Property>
               </Properties>
             </Component>
@@ -243,7 +243,7 @@
             <Component class="javax.swing.JButton" name="jButton3">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Andr&#xe9;\Downloads\man-talking-by-mic-on-a-presentation (1).png"/>
+                  <Image iconType="2" name="C:\Users\Andr&#xe9;\Desktop\ProjetoCEET\src\projetoceetsystemsix\CadFornecedor.png"/>
                 </Property>
               </Properties>
             </Component>
@@ -274,28 +274,28 @@
             <Component class="javax.swing.JButton" name="jButton4">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Andr&#xe9;\Downloads\search (1).png"/>
+                  <Image iconType="2" name="C:\Users\Andr&#xe9;\Desktop\ProjetoCEET\src\projetoceetsystemsix\PesqCliente.png"/>
                 </Property>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton5">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Andr&#xe9;\Downloads\iconfinder_meanicons_32_197241 (1).png"/>
+                  <Image iconType="2" name="C:\Users\Andr&#xe9;\Desktop\ProjetoCEET\src\projetoceetsystemsix\PesqProduto.png"/>
                 </Property>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton6">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Andr&#xe9;\Downloads\iconfinder_Socialmedia_icons_MySpace_492105 (1).png"/>
+                  <Image iconType="2" name="C:\Users\Andr&#xe9;\Desktop\ProjetoCEET\src\projetoceetsystemsix\PesqFornecedor.png"/>
                 </Property>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel9">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Andr&#xe9;\Downloads\iconfinder_Game_Controller_2228674.png"/>
+                  <Image iconType="2" name="C:\Users\Andr&#xe9;\Desktop\ProjetoCEET\src\projetoceetsystemsix\controle.png"/>
                 </Property>
               </Properties>
             </Component>
@@ -317,9 +317,9 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="297" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="300" max="-2" attributes="0"/>
                       <Component id="jLabel7" min="-2" pref="157" max="-2" attributes="0"/>
-                      <EmptySpace pref="346" max="32767" attributes="0"/>
+                      <EmptySpace pref="343" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -327,8 +327,8 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel7" pref="120" max="32767" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel7" min="-2" pref="139" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -337,7 +337,7 @@
             <Component class="javax.swing.JLabel" name="jLabel7">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Andr&#xe9;\Desktop\icon.png"/>
+                  <Image iconType="2" name="C:\Users\Andr&#xe9;\Desktop\ProjetoCEET\src\projetoceetsystemsix\icon.png"/>
                 </Property>
               </Properties>
             </Component>
