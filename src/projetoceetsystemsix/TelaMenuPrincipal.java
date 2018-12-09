@@ -271,9 +271,10 @@ public class TelaMenuPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void pesqClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pesqClienteActionPerformed
-        // pesquisar cliente 
-        String pesqCliente = ""; 
-        JOptionPane.showInputDialog(null, "Pesquisar cliente: "+pesqCliente);
+       PesqCliente pesqcliente = new PesqCliente(); 
+       pesqcliente.setVisible(true);
+         
+        
     }//GEN-LAST:event_pesqClienteActionPerformed
 
     private void pesqProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pesqProdutoActionPerformed
