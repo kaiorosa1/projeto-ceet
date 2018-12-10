@@ -13,8 +13,8 @@ public class Pedido {
     private int id;
     private int quantidade;
     private double valorTotal; 
-    private Produto produtoPedido; // deveria ser uma lista de pedidos 
-    private Cliente clientePedido; 
+    private String produtoPedido; // deveria ser uma lista de produtos 
+    private String clientePedido; 
     
     public int getId() {
         return id;
