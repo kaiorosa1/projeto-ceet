@@ -58,8 +58,6 @@ public class TelaMenuPrincipal extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(188, 75, 50));
 
-        btSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/close-button.png"))); // NOI18N
-
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel8.setText("Sair");
 
@@ -81,17 +79,16 @@ public class TelaMenuPrincipal extends javax.swing.JFrame {
                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btSair)
-                .addContainerGap(171, Short.MAX_VALUE))
+                .addContainerGap(201, Short.MAX_VALUE))
         );
 
         jLayeredPane1.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, -1, 360));
 
-        cadCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/CadCliente.png"))); // NOI18N
+        cadCliente.setIcon(new javax.swing.ImageIcon("C:\\Users\\Aluno\\Documents\\ProjetoCEET\\src\\Imagens\\CadCliente.png")); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel1.setText("Cadastrar Cliente");
 
-        cadProduto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/CadProduto.png"))); // NOI18N
         cadProduto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cadProdutoActionPerformed(evt);
@@ -104,7 +101,6 @@ public class TelaMenuPrincipal extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setText("Cadastrar Fornecedor");
 
-        cadFornecedor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/CadFornecedor.png"))); // NOI18N
         cadFornecedor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cadFornecedorActionPerformed(evt);
@@ -120,28 +116,23 @@ public class TelaMenuPrincipal extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel6.setText("Pesquisar Fornecedor");
 
-        pesqCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/PesqCliente.png"))); // NOI18N
         pesqCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pesqClienteActionPerformed(evt);
             }
         });
 
-        pesqProduto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/PesqProduto.png"))); // NOI18N
         pesqProduto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pesqProdutoActionPerformed(evt);
             }
         });
 
-        pesqFornecedor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/PesqFornecedor.png"))); // NOI18N
         pesqFornecedor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pesqFornecedorActionPerformed(evt);
             }
         });
-
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/controle.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -232,8 +223,6 @@ public class TelaMenuPrincipal extends javax.swing.JFrame {
         jLayeredPane1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, 700, 340));
 
         jPanel4.setBackground(new java.awt.Color(102, 102, 102));
-
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icon.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
