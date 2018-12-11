@@ -25,6 +25,6 @@ public class PagamentoDao {
         return null;
     }
     public void alterarPagamento(Pagamento pag){
-        //alterar um fornecedor existente existente
+        //alterar um pagamento existente
     }
 }
