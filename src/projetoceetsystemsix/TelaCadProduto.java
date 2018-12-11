@@ -39,9 +39,9 @@ public class TelaCadProduto extends javax.swing.JFrame {
         lblValorVenda = new javax.swing.JLabel();
         txtValorVenda = new javax.swing.JTextField();
         lblQuantidadeEstoque = new javax.swing.JLabel();
-        jToggleButton1 = new javax.swing.JToggleButton();
+        btnFinalizarCasdastro = new javax.swing.JToggleButton();
         jLabel20 = new javax.swing.JLabel();
-        jTextField11 = new javax.swing.JTextField();
+        txtNomeProduto = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -97,7 +97,12 @@ public class TelaCadProduto extends javax.swing.JFrame {
 
         lblQuantidadeEstoque.setText("Quantidade Em Estoque:");
 
-        jToggleButton1.setText("Finalizar Cadastro");
+        btnFinalizarCasdastro.setText("Finalizar Cadastro");
+        btnFinalizarCasdastro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFinalizarCasdastroActionPerformed(evt);
+            }
+        });
 
         jLabel20.setText("Nome:");
 
@@ -129,11 +134,11 @@ public class TelaCadProduto extends javax.swing.JFrame {
                             .addGroup(jPanel7Layout.createSequentialGroup()
                                 .addComponent(jLabel20)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(txtNomeProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addGap(216, 216, 216)
-                .addComponent(jToggleButton1)
+                .addComponent(btnFinalizarCasdastro)
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
                 .addGap(0, 0, Short.MAX_VALUE))
@@ -146,7 +151,7 @@ public class TelaCadProduto extends javax.swing.JFrame {
                         .addGap(17, 17, 17)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel20)
-                            .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtNomeProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
                         .addContainerGap()
@@ -166,7 +171,7 @@ public class TelaCadProduto extends javax.swing.JFrame {
                     .addComponent(txtValorVenda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(50, 50, 50)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jToggleButton1)
+                    .addComponent(btnFinalizarCasdastro)
                     .addComponent(jButton1))
                 .addContainerGap(75, Short.MAX_VALUE))
         );
@@ -188,6 +193,11 @@ public class TelaCadProduto extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnFinalizarCasdastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFinalizarCasdastroActionPerformed
+        // TODO add your handling code here:
+        //cadastro produtos
+    }//GEN-LAST:event_btnFinalizarCasdastroActionPerformed
 
     /**
      * @param args the command line arguments
@@ -225,6 +235,7 @@ public class TelaCadProduto extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JToggleButton btnFinalizarCasdastro;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel20;
@@ -232,12 +243,11 @@ public class TelaCadProduto extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel7;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JLabel lblDescricao;
     private javax.swing.JLabel lblQuantidadeEstoque;
     private javax.swing.JLabel lblValorCompra;
     private javax.swing.JLabel lblValorVenda;
+    private javax.swing.JTextField txtNomeProduto;
     private javax.swing.JTextField txtValorCompra;
     private javax.swing.JTextField txtValorVenda;
     private javax.swing.JTextField txtdescricao;
