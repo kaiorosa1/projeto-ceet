@@ -6,6 +6,7 @@
 package br.com.projetoceetsystemsix.dao;
 
 import br.com.projetoceetsystemsix.model.Produto;
+import java.util.List;
 
 /**
  *
@@ -19,5 +20,13 @@ public class ProdutoDao {
         INSERT INTO Poduto(nome,descricao,valorCompra,valorVenda,quantidadeEstoque)
         */
     }
-    
+    public List<Produto> BuscarProduto(int idProduto){
+        return null;
+    }
+    public List<Produto> BuscarAllProduto(){
+        return null;
+    }
+    public void alterarProduto(Produto produto){
+        //alterar um produto existente
+    }
 }

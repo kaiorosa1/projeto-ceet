@@ -7,6 +7,8 @@ package br.com.projetoceetsystemsix.view;
 
 import br.com.projetoceetsystemsix.dao.ProdutoDao;
 import br.com.projetoceetsystemsix.model.Produto;
+import java.awt.HeadlessException;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -213,8 +215,13 @@ public class TelaCadProduto extends javax.swing.JFrame {
         produto.setValorVenda(Double.parseDouble(txtValorVenda.getText()));
         produto.setQuantidadeEstoque(Integer.parseInt(txtQuantidadeEstoque.getText()));
         
-        //estara dentro de um try and catch 
-        pd.salvarProduto(produto); // nao esta salvando ainda no banco de dados
+        try{
+            pd.salvarProduto(produto); // nao esta salvando ainda no banco de dados
+             JOptionPane.showMessageDialog(this, "Sucesso ao cadastrar Produto!!");
+        }catch(HeadlessException e){
+             JOptionPane.showMessageDialog(this, "ERRO ao cadastrar Produto");
+        }
+       
     }//GEN-LAST:event_btnFinalizarCasdastroActionPerformed
 
     /**
