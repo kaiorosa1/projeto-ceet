@@ -59,7 +59,7 @@ public class Fornecedor {
         return complemento;
     }
 
-    public void setComlemento(String complemento) {
+    public void setComplemento(String complemento) {
         this.complemento = complemento;
     }
 

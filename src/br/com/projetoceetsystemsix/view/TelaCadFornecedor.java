@@ -5,6 +5,11 @@
  */
 package br.com.projetoceetsystemsix.view;
 
+import br.com.projetoceetsystemsix.dao.FornecedorDao;
+import br.com.projetoceetsystemsix.model.Fornecedor;
+import java.awt.HeadlessException;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Aluno
@@ -38,19 +43,19 @@ public class TelaCadFornecedor extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        txtRazaoSocial = new javax.swing.JTextField();
+        txtCNPJ = new javax.swing.JTextField();
+        txtLogradouro = new javax.swing.JTextField();
+        txtComplemento = new javax.swing.JTextField();
+        txtBairro = new javax.swing.JTextField();
+        txtCEP = new javax.swing.JTextField();
+        combCidade = new javax.swing.JComboBox<>();
+        combUF = new javax.swing.JComboBox<>();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jTextField12 = new javax.swing.JTextField();
-        jTextField13 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        txtTelefone = new javax.swing.JTextField();
+        txtCelular = new javax.swing.JTextField();
+        btnFinalizarCadastro = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -110,15 +115,20 @@ public class TelaCadFornecedor extends javax.swing.JFrame {
 
         jLabel8.setText("CEP:");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "----------------Cidade----------------", "Vila Velha", "Vitória", "Serra" }));
+        combCidade.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "----------------Cidade----------------", "Vila Velha", "Vitória", "Serra" }));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "UF", "ES", "RJ", "SP", "MG", "RS" }));
+        combUF.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "UF", "ES", "RJ", "SP", "MG", "RS" }));
 
         jLabel13.setText("Telefone Celular:");
 
         jLabel14.setText("Telefone Comercial:");
 
-        jButton1.setText("Finalizar Cadastro");
+        btnFinalizarCadastro.setText("Finalizar Cadastro");
+        btnFinalizarCadastro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFinalizarCadastroActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Fechar");
 
@@ -132,9 +142,9 @@ public class TelaCadFornecedor extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FormFornecedorLayout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtRazaoSocial, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(32, 32, 32)
-                        .addComponent(jComboBox1, 0, 236, Short.MAX_VALUE)
+                        .addComponent(combCidade, 0, 236, Short.MAX_VALUE)
                         .addGap(94, 94, 94))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FormFornecedorLayout.createSequentialGroup()
                         .addGroup(FormFornecedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -146,12 +156,12 @@ public class TelaCadFornecedor extends javax.swing.JFrame {
                                         .addComponent(jLabel3)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(FormFornecedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField3)
-                                    .addComponent(jTextField2)))
+                                    .addComponent(txtLogradouro)
+                                    .addComponent(txtCNPJ)))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, FormFornecedorLayout.createSequentialGroup()
                                 .addComponent(jLabel5)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField4)))
+                                .addComponent(txtComplemento)))
                         .addGroup(FormFornecedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(FormFornecedorLayout.createSequentialGroup()
                                 .addGap(32, 32, 32)
@@ -159,27 +169,27 @@ public class TelaCadFornecedor extends javax.swing.JFrame {
                                     .addGroup(FormFornecedorLayout.createSequentialGroup()
                                         .addComponent(jLabel8)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(txtCEP, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(FormFornecedorLayout.createSequentialGroup()
                                         .addComponent(jLabel6)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField5))))
+                                        .addComponent(txtBairro))))
                             .addGroup(FormFornecedorLayout.createSequentialGroup()
                                 .addGap(46, 46, 46)
-                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(combUF, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(141, 141, 141))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FormFornecedorLayout.createSequentialGroup()
                         .addGroup(FormFornecedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(FormFornecedorLayout.createSequentialGroup()
                                 .addComponent(jLabel13)
                                 .addGap(31, 31, 31)
-                                .addComponent(jTextField13))
+                                .addComponent(txtCelular))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, FormFornecedorLayout.createSequentialGroup()
                                 .addComponent(jLabel14)
                                 .addGap(18, 18, 18)
-                                .addComponent(jTextField12)))
+                                .addComponent(txtTelefone)))
                         .addGap(26, 26, 26)
-                        .addComponent(jButton1)
+                        .addComponent(btnFinalizarCadastro)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton2)
                         .addGap(87, 87, 87))))
@@ -190,34 +200,34 @@ public class TelaCadFornecedor extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(FormFornecedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtRazaoSocial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(combCidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(FormFornecedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtLogradouro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(combUF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(FormFornecedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtCNPJ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtCEP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(FormFornecedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtComplemento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtBairro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(FormFornecedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14)
-                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(FormFornecedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel13)
-                    .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1)
+                    .addComponent(txtCelular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnFinalizarCadastro)
                     .addComponent(jButton2))
                 .addContainerGap(87, Short.MAX_VALUE))
         );
@@ -239,6 +249,30 @@ public class TelaCadFornecedor extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnFinalizarCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFinalizarCadastroActionPerformed
+        // TODO add your handling code here:
+        FornecedorDao fd =  new FornecedorDao();
+        Fornecedor fornecedor  = new Fornecedor();
+        
+        fornecedor.setRazaoSocial(txtRazaoSocial.getText());
+        fornecedor.setLogradouro(txtLogradouro.getText());
+        fornecedor.setCNPJ(Integer.parseInt(txtCNPJ.getText()));
+        fornecedor.setComplemento(txtComplemento.getText());
+        fornecedor.setTelefoneComercial(Integer.parseInt(txtTelefone.getText()));
+        fornecedor.setTelefoneCelular(Integer.parseInt(txtCelular.getText()));
+        fornecedor.setCidade(combCidade.getSelectedItem().toString());
+        fornecedor.setUF(combUF.getSelectedItem().toString());
+        fornecedor.setCep(Integer.parseInt(txtCEP.getText()));
+        fornecedor.setBairro(txtBairro.getText());
+        
+        try{
+                fd.salvarFornecedor(fornecedor); // nao implementado ainda 
+                JOptionPane.showMessageDialog(this, "Sucesso ao cadastrar Fornecedor!!");
+        }catch(HeadlessException e){
+                JOptionPane.showMessageDialog(this, "ERRO ao cadastrar Fornecedor!!");
+        }
+    }//GEN-LAST:event_btnFinalizarCadastroActionPerformed
 
     /**
      * @param args the command line arguments
@@ -277,10 +311,10 @@ public class TelaCadFornecedor extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel FormFornecedor;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnFinalizarCadastro;
+    private javax.swing.JComboBox<String> combCidade;
+    private javax.swing.JComboBox<String> combUF;
     private javax.swing.JButton jButton2;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
@@ -293,13 +327,13 @@ public class TelaCadFornecedor extends javax.swing.JFrame {
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField txtBairro;
+    private javax.swing.JTextField txtCEP;
+    private javax.swing.JTextField txtCNPJ;
+    private javax.swing.JTextField txtCelular;
+    private javax.swing.JTextField txtComplemento;
+    private javax.swing.JTextField txtLogradouro;
+    private javax.swing.JTextField txtRazaoSocial;
+    private javax.swing.JTextField txtTelefone;
     // End of variables declaration//GEN-END:variables
 }

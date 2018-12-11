@@ -333,7 +333,7 @@ public class TelaCadCliente extends javax.swing.JFrame {
             clienteF.setCPF(Integer.parseInt(txtCPF.getText()));
             
              try{
-                cd.salvarCliente(clienteF);
+                cd.salvarCliente(clienteF); // nao implementado ainda 
                 JOptionPane.showMessageDialog(this, "Sucesso ao cadastrar Cliente!!");
             }catch(HeadlessException e){
                 JOptionPane.showMessageDialog(this, "ERRO ao cadastrar Cliente!!");
@@ -352,7 +352,7 @@ public class TelaCadCliente extends javax.swing.JFrame {
             clienteJ.setRazaoSocial(txtRazaoSocial.getText());
             
             try{
-                cd.salvarCliente(clienteJ);
+                cd.salvarCliente(clienteJ); // nao implementado ainda 
                 JOptionPane.showMessageDialog(this, "Sucesso ao cadastrar Cliente!!");
             }catch(HeadlessException e){
                 JOptionPane.showMessageDialog(this, "ERRO ao cadastrar Cliente!!");
