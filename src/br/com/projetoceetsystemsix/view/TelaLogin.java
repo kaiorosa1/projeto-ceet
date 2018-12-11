@@ -175,10 +175,9 @@ public class TelaLogin extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Bem vindo!");
             TelaMenuPrincipal menu = new TelaMenuPrincipal(); 
             menu.setVisible(true);
-        }else 
+        }else{
             JOptionPane.showMessageDialog(null, "Login ou Senha Incorreto !");
-        
-        
+        }
         
     }//GEN-LAST:event_btnEntrarActionPerformed
 
