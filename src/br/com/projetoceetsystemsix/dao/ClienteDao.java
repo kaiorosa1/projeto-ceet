@@ -12,7 +12,7 @@ import java.util.List;
  *
  * @author user
  */
-public class CienteDao {
+public class ClienteDao {
     public void salvarCliente(Cliente cliente){
         //conectar com o banco de dados aqui
         

@@ -5,6 +5,13 @@
  */
 package br.com.projetoceetsystemsix.view;
 
+import br.com.projetoceetsystemsix.dao.ClienteDao;
+import br.com.projetoceetsystemsix.model.Cliente;
+import br.com.projetoceetsystemsix.model.ClienteFisico;
+import br.com.projetoceetsystemsix.model.ClienteJuridico;
+import java.awt.HeadlessException;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Aluno
@@ -27,6 +34,7 @@ public class TelaCadCliente extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jLayeredPane1 = new javax.swing.JLayeredPane();
         jPanel1 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
@@ -49,11 +57,11 @@ public class TelaCadCliente extends javax.swing.JFrame {
         txtBairro = new javax.swing.JTextField();
         txtEmail = new javax.swing.JTextField();
         txtCelular = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
-        jTextField10 = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
+        txtRG = new javax.swing.JTextField();
+        txtCPF = new javax.swing.JTextField();
+        txtCNPJ = new javax.swing.JTextField();
+        txtRazaoSocial = new javax.swing.JTextField();
+        btnFinalizarCadastro = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -111,6 +119,7 @@ public class TelaCadCliente extends javax.swing.JFrame {
 
         jLabel12.setText("Celular :");
 
+        buttonGroup1.add(rbtnFisico);
         rbtnFisico.setText("Físico");
         rbtnFisico.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -118,6 +127,7 @@ public class TelaCadCliente extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup1.add(rbtnJuridico);
         rbtnJuridico.setText("Juridico");
 
         jLabel15.setText("Tipo:");
@@ -136,22 +146,22 @@ public class TelaCadCliente extends javax.swing.JFrame {
             }
         });
 
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+        txtCPF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
+                txtCPFActionPerformed(evt);
             }
         });
 
-        jTextField10.addActionListener(new java.awt.event.ActionListener() {
+        txtRazaoSocial.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField10ActionPerformed(evt);
+                txtRazaoSocialActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Finalizar Cadastro");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnFinalizarCadastro.setText("Finalizar Cadastro");
+        btnFinalizarCadastro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnFinalizarCadastroActionPerformed(evt);
             }
         });
 
@@ -178,7 +188,7 @@ public class TelaCadCliente extends javax.swing.JFrame {
                                     .addComponent(jLabel10)
                                     .addGap(18, 18, 18)
                                     .addComponent(txtBairro, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING))
+                            .addComponent(btnFinalizarCadastro, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel5Layout.createSequentialGroup()
                                 .addGap(89, 89, 89)
@@ -189,8 +199,8 @@ public class TelaCadCliente extends javax.swing.JFrame {
                                             .addComponent(jLabel17))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jTextField7)
-                                            .addComponent(jTextField6)))
+                                            .addComponent(txtCPF)
+                                            .addComponent(txtRG)))
                                     .addGroup(jPanel5Layout.createSequentialGroup()
                                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(rbtnFisico)
@@ -218,11 +228,11 @@ public class TelaCadCliente extends javax.swing.JFrame {
                                 .addGroup(jPanel5Layout.createSequentialGroup()
                                     .addComponent(jLabel19)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(txtRazaoSocial, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(jPanel5Layout.createSequentialGroup()
                                     .addComponent(jLabel18)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jTextField9))))))
+                                    .addComponent(txtCNPJ))))))
                 .addGap(127, 127, 127))
         );
         jPanel5Layout.setVerticalGroup(
@@ -243,12 +253,12 @@ public class TelaCadCliente extends javax.swing.JFrame {
                     .addComponent(jLabel9)
                     .addComponent(txtEndereco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel16)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtRG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(14, 14, 14)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
                     .addComponent(txtBairro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtCPF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel17))
                 .addGap(20, 20, 20)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -260,15 +270,15 @@ public class TelaCadCliente extends javax.swing.JFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtCelular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel12)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtCNPJ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel18))
                 .addGap(21, 21, 21)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtRazaoSocial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel19))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
+                    .addComponent(btnFinalizarCadastro)
                     .addComponent(jButton1))
                 .addContainerGap(55, Short.MAX_VALUE))
         );
@@ -297,17 +307,60 @@ public class TelaCadCliente extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCelularActionPerformed
 
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+    private void txtCPFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCPFActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
+    }//GEN-LAST:event_txtCPFActionPerformed
 
-    private void jTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField10ActionPerformed
+    private void txtRazaoSocialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRazaoSocialActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField10ActionPerformed
+    }//GEN-LAST:event_txtRazaoSocialActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnFinalizarCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFinalizarCadastroActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+        ClienteDao cd = new ClienteDao();
+        ClienteFisico clienteF = null;
+        ClienteJuridico clienteJ = null;
+        
+        if(rbtnFisico.isSelected()){
+            clienteF = new ClienteFisico();
+            clienteF.setNome(txtNome.getText());
+            clienteF.setEndereco(txtEndereco.getText());
+            clienteF.setBairro(txtBairro.getText());
+            clienteF.setEmail(txtEmail.getText());
+            clienteF.setTelefoneCelular(Integer.parseInt(txtCelular.getText()));
+            
+            clienteF.setRG(Integer.parseInt(txtRG.getText()));
+            clienteF.setCPF(Integer.parseInt(txtCPF.getText()));
+            
+             try{
+                cd.salvarCliente(clienteF);
+                JOptionPane.showMessageDialog(this, "Sucesso ao cadastrar Cliente!!");
+            }catch(HeadlessException e){
+                JOptionPane.showMessageDialog(this, "ERRO ao cadastrar Cliente!!");
+            }
+            
+        }else if(rbtnJuridico.isSelected()){
+            clienteJ  = new ClienteJuridico();
+            clienteJ.setNome(txtNome.getText());
+            clienteJ.setEndereco(txtEndereco.getText());
+            clienteJ.setBairro(txtBairro.getText());
+            clienteJ.setEmail(txtEmail.getText());
+            clienteJ.setTelefoneCelular(Integer.parseInt(txtCelular.getText()));
+            
+            
+            clienteJ.setCNPJ(Integer.parseInt(txtCNPJ.getText()));
+            clienteJ.setRazaoSocial(txtRazaoSocial.getText());
+            
+            try{
+                cd.salvarCliente(clienteJ);
+                JOptionPane.showMessageDialog(this, "Sucesso ao cadastrar Cliente!!");
+            }catch(HeadlessException e){
+                JOptionPane.showMessageDialog(this, "ERRO ao cadastrar Cliente!!");
+            }
+        }
+        
+       
+    }//GEN-LAST:event_btnFinalizarCadastroActionPerformed
 
     /**
      * @param args the command line arguments
@@ -345,8 +398,9 @@ public class TelaCadCliente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnFinalizarCadastro;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -362,16 +416,16 @@ public class TelaCadCliente extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField9;
     private javax.swing.JRadioButton rbtnFisico;
     private javax.swing.JRadioButton rbtnJuridico;
     private javax.swing.JTextField txtBairro;
+    private javax.swing.JTextField txtCNPJ;
+    private javax.swing.JTextField txtCPF;
     private javax.swing.JTextField txtCelular;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtEndereco;
     private javax.swing.JTextField txtNome;
+    private javax.swing.JTextField txtRG;
+    private javax.swing.JTextField txtRazaoSocial;
     // End of variables declaration//GEN-END:variables
 }

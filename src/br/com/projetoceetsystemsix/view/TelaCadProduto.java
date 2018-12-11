@@ -217,7 +217,7 @@ public class TelaCadProduto extends javax.swing.JFrame {
         
         try{
             pd.salvarProduto(produto); // nao esta salvando ainda no banco de dados
-             JOptionPane.showMessageDialog(this, "Sucesso ao cadastrar Produto!!");
+            JOptionPane.showMessageDialog(this, "Sucesso ao cadastrar Produto!!");
         }catch(HeadlessException e){
              JOptionPane.showMessageDialog(this, "ERRO ao cadastrar Produto");
         }
