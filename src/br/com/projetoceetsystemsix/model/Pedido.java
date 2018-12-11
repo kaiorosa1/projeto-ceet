@@ -14,6 +14,22 @@ public class Pedido {
     private int quantidade;
     private double valorTotal; 
     private String produtoPedido; // deveria ser uma lista de produtos 
+
+    public String getProdutoPedido() {
+        return produtoPedido;
+    }
+
+    public void setProdutoPedido(String produtoPedido) {
+        this.produtoPedido = produtoPedido;
+    }
+
+    public String getClientePedido() {
+        return clientePedido;
+    }
+
+    public void setClientePedido(String clientePedido) {
+        this.clientePedido = clientePedido;
+    }
     private String clientePedido; 
     
     public int getId() {

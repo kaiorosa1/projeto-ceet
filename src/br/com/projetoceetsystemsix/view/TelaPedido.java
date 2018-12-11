@@ -5,6 +5,11 @@
  */
 package br.com.projetoceetsystemsix.view;
 
+import br.com.projetoceetsystemsix.dao.PedidoDao;
+import br.com.projetoceetsystemsix.model.Pedido;
+import java.awt.HeadlessException;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author user
@@ -189,25 +194,19 @@ public class TelaPedido extends javax.swing.JFrame {
 
     private void btnFinalizarCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFinalizarCadastroActionPerformed
         // TODO add your handling code here:
-        FornecedorDao fd =  new FornecedorDao();
-        Fornecedor fornecedor  = new Fornecedor();
-
-        fornecedor.setRazaoSocial(txtProduto.getText());
-        fornecedor.setLogradouro(txtCliente.getText());
-        fornecedor.setCNPJ(Integer.parseInt(txtQuantidade.getText()));
-        fornecedor.setComplemento(txtValorTotal.getText());
-        fornecedor.setTelefoneComercial(Integer.parseInt(txtTelefone.getText()));
-        fornecedor.setTelefoneCelular(Integer.parseInt(txtCelular.getText()));
-        fornecedor.setCidade(combCidade.getSelectedItem().toString());
-        fornecedor.setUF(combUF.getSelectedItem().toString());
-        fornecedor.setCep(Integer.parseInt(txtCEP.getText()));
-        fornecedor.setBairro(txtBairro.getText());
-
+        PedidoDao pd = new PedidoDao();
+        Pedido pedido =new Pedido();
+        
+        pedido.setClientePedido(txtCliente.getText()); //rever o tipo aqui
+        pedido.setProdutoPedido(txtProduto.getText()); // rever o tipo aqui (pode ser um id)
+        pedido.setQuantidade(Integer.parseInt(txtQuantidade.getText()));
+        pedido.setValorTotal(Double.parseDouble(txtValorTotal.getText()));
+        
         try{
-            fd.salvarFornecedor(fornecedor); // nao implementado ainda
-            JOptionPane.showMessageDialog(this, "Sucesso ao cadastrar Fornecedor!!");
+            pd.salvarPedido(pedido); // nao implementado ainda
+            JOptionPane.showMessageDialog(this, "Sucesso ao cadastrar Pedido!!");
         }catch(HeadlessException e){
-            JOptionPane.showMessageDialog(this, "ERRO ao cadastrar Fornecedor!!");
+            JOptionPane.showMessageDialog(this, "ERRO ao cadastrar Pedido!!");
         }
     }//GEN-LAST:event_btnFinalizarCadastroActionPerformed
 
