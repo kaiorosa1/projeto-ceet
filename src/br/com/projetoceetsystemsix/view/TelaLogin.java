@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package projetoceetsystemsix;
+package br.com.projetoceetsystemsix.view;
 
+import br.com.projetoceetsystemsix.model.Login;
 import javax.swing.JOptionPane;
 
 /**

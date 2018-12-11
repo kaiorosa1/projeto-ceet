@@ -3,7 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package projetoceetsystemsix;
+package br.com.projetoceetsystemsix.view;
+
+import br.com.projetoceetsystemsix.dao.ProdutoDao;
+import br.com.projetoceetsystemsix.model.Produto;
 
 /**
  *
@@ -33,7 +36,7 @@ public class TelaCadProduto extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
         lblDescricao = new javax.swing.JLabel();
-        txtdescricao = new javax.swing.JTextField();
+        txtDescricao = new javax.swing.JTextField();
         lblValorCompra = new javax.swing.JLabel();
         txtValorCompra = new javax.swing.JTextField();
         lblValorVenda = new javax.swing.JLabel();
@@ -43,6 +46,7 @@ public class TelaCadProduto extends javax.swing.JFrame {
         jLabel20 = new javax.swing.JLabel();
         txtNomeProduto = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        txtQuantidadeEstoque = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -123,19 +127,21 @@ public class TelaCadProduto extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(txtValorCompra, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
-                            .addComponent(txtdescricao)
+                            .addComponent(txtDescricao)
                             .addComponent(txtValorVenda))
                         .addGap(445, 445, 445))
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel7Layout.createSequentialGroup()
                                 .addGap(323, 323, 323)
-                                .addComponent(lblQuantidadeEstoque))
+                                .addComponent(lblQuantidadeEstoque)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtQuantidadeEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel7Layout.createSequentialGroup()
                                 .addComponent(jLabel20)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(txtNomeProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addContainerGap(132, Short.MAX_VALUE))))
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addGap(216, 216, 216)
                 .addComponent(btnFinalizarCasdastro)
@@ -155,11 +161,13 @@ public class TelaCadProduto extends javax.swing.JFrame {
                         .addGap(18, 18, 18))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(lblQuantidadeEstoque)))
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblQuantidadeEstoque)
+                            .addComponent(txtQuantidadeEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addGap(3, 3, 3)
-                        .addComponent(txtdescricao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtDescricao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(lblDescricao, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -197,6 +205,16 @@ public class TelaCadProduto extends javax.swing.JFrame {
     private void btnFinalizarCasdastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFinalizarCasdastroActionPerformed
         // TODO add your handling code here:
         //cadastro produtos
+        ProdutoDao pd = new ProdutoDao();
+        Produto produto  = new Produto();
+        produto.setNome(txtNomeProduto.getText());
+        produto.setDescricao(txtDescricao.getText());
+        produto.setValorCompra(Double.parseDouble(txtValorCompra.getText()));
+        produto.setValorVenda(Double.parseDouble(txtValorVenda.getText()));
+        produto.setQuantidadeEstoque(Integer.parseInt(txtQuantidadeEstoque.getText()));
+        
+        //estara dentro de um try and catch 
+        pd.salvarProduto(produto); // nao esta salvando ainda no banco de dados
     }//GEN-LAST:event_btnFinalizarCasdastroActionPerformed
 
     /**
@@ -247,9 +265,10 @@ public class TelaCadProduto extends javax.swing.JFrame {
     private javax.swing.JLabel lblQuantidadeEstoque;
     private javax.swing.JLabel lblValorCompra;
     private javax.swing.JLabel lblValorVenda;
+    private javax.swing.JTextField txtDescricao;
     private javax.swing.JTextField txtNomeProduto;
+    private javax.swing.JTextField txtQuantidadeEstoque;
     private javax.swing.JTextField txtValorCompra;
     private javax.swing.JTextField txtValorVenda;
-    private javax.swing.JTextField txtdescricao;
     // End of variables declaration//GEN-END:variables
 }

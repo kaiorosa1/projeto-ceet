@@ -141,7 +141,7 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Component id="txtValorCompra" alignment="1" pref="176" max="32767" attributes="0"/>
-                                  <Component id="txtdescricao" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="txtDescricao" alignment="1" max="32767" attributes="0"/>
                                   <Component id="txtValorVenda" alignment="1" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="445" max="-2" attributes="0"/>
@@ -151,6 +151,8 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="323" max="-2" attributes="0"/>
                                       <Component id="lblQuantidadeEstoque" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="txtQuantidadeEstoque" min="-2" pref="115" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
@@ -158,7 +160,7 @@
                                       <Component id="txtNomeProduto" min="-2" pref="212" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace pref="132" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -185,13 +187,16 @@
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="lblQuantidadeEstoque" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="lblQuantidadeEstoque" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtQuantidadeEstoque" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                              <Component id="txtdescricao" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtDescricao" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Component id="lblDescricao" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -221,7 +226,7 @@
                 <Property name="text" type="java.lang.String" value="Descri&#xe7;&#xe3;o:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtdescricao">
+            <Component class="javax.swing.JTextField" name="txtDescricao">
             </Component>
             <Component class="javax.swing.JLabel" name="lblValorCompra">
               <Properties>
@@ -261,6 +266,8 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Fechar"/>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txtQuantidadeEstoque">
             </Component>
           </SubComponents>
         </Container>

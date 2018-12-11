@@ -81,11 +81,6 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JButton" name="btSair">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Aluno\Documents\ProjetoCEET\src\Imagens\close-button.png"/>
-                </Property>
-              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel8">
               <Properties>
@@ -213,11 +208,6 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JButton" name="cadCliente">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Aluno\Documents\ProjetoCEET\src\Imagens\CadCliente.png"/>
-                </Property>
-              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel1">
               <Properties>
@@ -228,11 +218,6 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="cadProduto">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Aluno\Documents\ProjetoCEET\src\Imagens\CadProduto.png"/>
-                </Property>
-              </Properties>
               <AccessibilityProperties>
                 <Property name="AccessibleContext.accessibleParent" type="javax.accessibility.Accessible" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="cadProduto"/>
@@ -259,11 +244,6 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="cadFornecedor">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Aluno\Documents\ProjetoCEET\src\Imagens\CadFornecedor.png"/>
-                </Property>
-              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cadFornecedorActionPerformed"/>
               </Events>
@@ -293,31 +273,16 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="pesqCliente">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Aluno\Documents\ProjetoCEET\src\Imagens\PesqCliente.png"/>
-                </Property>
-              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pesqClienteActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JButton" name="pesqProduto">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Aluno\Documents\ProjetoCEET\src\Imagens\PesqProduto.png"/>
-                </Property>
-              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pesqProdutoActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JButton" name="pesqFornecedor">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Aluno\Documents\ProjetoCEET\src\Imagens\PesqFornecedor.png"/>
-                </Property>
-              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pesqFornecedorActionPerformed"/>
               </Events>
@@ -325,11 +290,6 @@
             <Component class="javax.swing.JLabel" name="jLabel9">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel10">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Aluno\Documents\ProjetoCEET\src\Imagens\controle.png"/>
-                </Property>
-              </Properties>
             </Component>
           </SubComponents>
         </Container>
@@ -367,11 +327,6 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel7">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\Aluno\Documents\ProjetoCEET\src\Imagens\icon.png"/>
-                </Property>
-              </Properties>
             </Component>
           </SubComponents>
         </Container>
