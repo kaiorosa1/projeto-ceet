@@ -24,7 +24,7 @@ public class CienteDao {
     public List<Cliente> BuscarAllCliente(){
         return null;
     }
-    public void alterarProduto(Cliente cliente){
+    public void alterarCliente(Cliente cliente){
         //alterar um cliente existente
     }
 }
