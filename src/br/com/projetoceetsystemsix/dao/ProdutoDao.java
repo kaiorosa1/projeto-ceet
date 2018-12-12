@@ -67,7 +67,6 @@ public class ProdutoDao {
              pstm.setInt(1, idProduto);
              rset = pstm.executeQuery();
              
-             //Enquanto existir dados no banco de dados, faça
              while(rset.next()){
                  
                 
