@@ -5,10 +5,22 @@
  */
 package br.com.projetoceetsystemsix.connection;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
 /**
  *
  * @author user
  */
 public class DBConnection {
-    //aqui sera feita per say a ligacao com o banco de dados
+    public static Connection conectarMysql() throws SQLException, ClassNotFoundException{
+        
+        //criar a condição com o banco de dados
+        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/cadastro","root","root");
+                
+       //faz com que classe seja carregada pela JVM
+       Class.forName("com.mysql.jdbc.Driver");
+       return connection;
+    }
 }
