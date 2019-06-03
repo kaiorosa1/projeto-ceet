@@ -17,13 +17,15 @@ public class TesteDBConnection {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws ClassNotFoundException {
-        // TODO code application logic here
-        try {
-            Connection conn = DBConnection.conectarMysql();
-            JOptionPane.showMessageDialog(null, "Conectado com sucesso!!");
-        } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Erro ao conectar\n"+ex);
-        }
-    }
+    // teste se esta conectando com o banco
+//    public static void main(String[] args) throws ClassNotFoundException {
+//        // TODO code application logic here
+//        try {
+//            Connection conn = DBConnection.conectarMysql();
+//            JOptionPane.showMessageDialog(null, "Conectado com sucesso!!");         
+//            
+//        } catch (SQLException ex) {
+//            JOptionPane.showMessageDialog(null, "Erro ao conectar\n"+ex);
+//        }
+//    }
 }
