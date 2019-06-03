@@ -58,6 +58,12 @@ public class TelaMenuPrincipal extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(188, 75, 50));
 
+        btSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btSairActionPerformed(evt);
+            }
+        });
+
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel8.setText("Sair");
 
@@ -83,6 +89,12 @@ public class TelaMenuPrincipal extends javax.swing.JFrame {
         );
 
         jLayeredPane1.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, -1, 360));
+
+        cadCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cadClienteActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel1.setText("Cadastrar Cliente");
@@ -260,25 +272,26 @@ public class TelaMenuPrincipal extends javax.swing.JFrame {
     private void pesqClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pesqClienteActionPerformed
        PesqCliente pesqcliente = new PesqCliente(); 
        pesqcliente.setVisible(true);
-         
+       this.setVisible(false);
         
     }//GEN-LAST:event_pesqClienteActionPerformed
 
     private void pesqProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pesqProdutoActionPerformed
         // pesquisar produto 
-        String pesqProduto = ""; 
-        JOptionPane.showInputDialog(null, "Pesquisar produto: "+pesqProduto);
+        new PesqProduto().setVisible(true);
+        this.setVisible(true);
     }//GEN-LAST:event_pesqProdutoActionPerformed
 
     private void pesqFornecedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pesqFornecedorActionPerformed
         // pesquisar fornecedor 
-        String pesqFornecedor = ""; 
-        JOptionPane.showInputDialog(null, "Pesquisar fornecedor: "+pesqFornecedor);
+        new PesqFornecedor().setVisible(true);
+        this.setVisible(true);
     }//GEN-LAST:event_pesqFornecedorActionPerformed
 
     private void cadFornecedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadFornecedorActionPerformed
         // tela de cadastro fornecedor 
-    
+        new TelaCadFornecedor().setVisible(true);
+        this.setVisible(false);
         
         
     }//GEN-LAST:event_cadFornecedorActionPerformed
@@ -286,9 +299,22 @@ public class TelaMenuPrincipal extends javax.swing.JFrame {
     
     private void cadProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadProdutoActionPerformed
         // cadastrar produto 
-        
-        
+        new TelaCadProduto().setVisible(true);
+        this.setVisible(false);
+         
     }//GEN-LAST:event_cadProdutoActionPerformed
+
+    private void cadClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadClienteActionPerformed
+        // cadastrar cliente
+        new TelaCadCliente().setVisible(true);
+        this.setVisible(false);
+       
+    }//GEN-LAST:event_cadClienteActionPerformed
+
+    private void btSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSairActionPerformed
+        // sair
+        JOptionPane.showMessageDialog(null, "Bye!");
+    }//GEN-LAST:event_btSairActionPerformed
 
     /**
      * @param args the command line arguments
